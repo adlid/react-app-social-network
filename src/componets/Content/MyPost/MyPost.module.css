@@ -1,0 +1,13 @@
+.content_textarea{
+    width: 200px;
+    height: 50px;
+    margin-top: 15px;
+}
+.content__posts{
+    margin-top: 35px;
+  }
+  .content__posts_mypost p {
+      color: black;
+      font-weight: 500;
+      font-size: 25px;
+  }

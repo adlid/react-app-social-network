@@ -1,0 +1,9 @@
+.content__header{
+    text-align: center;
+}
+.content__header img{
+    width: 1200px;
+    height: 450px;
+     object-fit: contain;
+    background-repeat: no-repeat;
+}

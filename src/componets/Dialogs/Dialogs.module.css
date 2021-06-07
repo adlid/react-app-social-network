@@ -1,0 +1,35 @@
+.dialogs{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-areas: 
+    "d m";
+}
+
+.dialogs_items{
+    grid-area: d;
+}
+.dialogs-items .item{
+     
+}
+.item_active{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    
+    
+}
+.message_items{
+    grid-area: m;
+   
+}
+.message-items .message{
+
+}
+.message__send form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+.message__send form>textarea{
+    height: 50px;
+}

@@ -1,0 +1,38 @@
+.nav{
+    grid-area: n;
+    background-color: brown;
+    padding: 20px 5px 20px 30px;
+    max-width: 400px;
+  }
+  .nav .menu__list a{
+    text-decoration: none;
+    color: #fff;
+    transition: 0.9s;
+  }
+  .menu__list{
+    padding: 3px 8px;
+    font-size: 18px;
+  }
+  .menu__list:hover{
+    border-left: solid 2px #fff;
+  }
+  .menu__list+.menu__list{
+      margin-top: 10px;
+     
+  }
+ 
+  .menu__list a.activelink {
+      color: black;
+  }
+  .menu__list_friends{
+    margin-top: 30px;
+    
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .menu__list_friend{
+    max-width: 50px;
+    height: auto;
+  }

@@ -1,0 +1,21 @@
+.content__post{
+    width: auto;
+    height: 80px;
+    display: flex;
+    margin-left: 20px;
+    border: solid 2px rgb(71, 2, 2);
+    margin-top:3px ;
+}
+.content__post img{
+    
+    background-color: azure;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+.content__post span{
+    border: solid 2px rgb(71, 2, 2);
+    height: 30px;
+    margin-left: 20px;
+}
