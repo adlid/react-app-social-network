@@ -8,6 +8,7 @@ import DialogsContainer from './componets/Dialogs/DialogsContainer'
 import UsersConatiner from './componets/Users/UsersContainer';
 import ContentContainer from './componets/Content/ContentContainer';
 import HeaderContainer from './componets/Header/HeaderContainer';
+import LoginPage from './componets/Login/login';
 const App = () => {
         return (
            <BrowserRouter >
@@ -18,6 +19,7 @@ const App = () => {
                     <Route path = '/dialogs' render = {() => <DialogsContainer />} />
                     <Route path = '/content/:userId?'render = {() =><ContentContainer />} />      
                     <Route path = '/users'render = {() =><UsersConatiner />} />       
+                    <Route path = '/login'render = {() =><LoginPage />} />  
                 </div > 
             </div>
         </BrowserRouter >
