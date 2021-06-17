@@ -1,5 +1,6 @@
 import Preloader from "../../common/preloader/Preloader";
 import c from "./ProfileInfo.module.css";
+import ProfileStatus from "./ProfileStatus";
 
 const ProfileInfo =(props)=>{
     if(!props.profile){
@@ -8,16 +9,17 @@ const ProfileInfo =(props)=>{
     return(
         <div>
             
-            <div className={c.content__header}>
+           {/* <div className={c.content__header}>
                 <img src="https://freellustrustrations.s3.us-east-2.amazonaws.com/free-images/thumbimg_25361957thumbejpg.jpg" alt=""/>
-            </div>
+            </div>*/}
             <div>
                 <img src={props.profile.photos.large} alt=""/>
                 <div> 
-                    <p>status</p>
+                   <ProfileStatus status={"Hello my friends"}/>
                     {props.profile.fullName}
                 </div>
                 ava+descr
+
             </div>
         </div>
     )

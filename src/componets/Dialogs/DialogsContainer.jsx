@@ -2,6 +2,7 @@ import {sendMessageActionCreateor, udateNewMessageTextActionCreator} from '../..
 import Dialogs from './Dialogs'
 import { connect } from "react-redux";
 import { Redirect } from 'react-router';
+import { compose } from 'redux';
 let mapStateToProps=(state)=>{
     return{
         dialogsPage: state.dialogsPage,
@@ -19,6 +20,7 @@ let mapDispatchToProps=(dispatch)=>{
 
     }
 }
+compose()()
 let AuthRedirectComponent = (props) =>{
     if(!this.props.isAuth) return <Redirect to="/login" />
     

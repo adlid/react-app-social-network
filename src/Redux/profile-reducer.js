@@ -1,5 +1,5 @@
-import { UserAPI } from "../Api/api";
-
+import { profileAPI, UserAPI } from "../Api/api";
+const SET_STATUS = 'SET_STATUS'
 const SET_USER_PROFILE = 'SET_USER_PROFILE';
 let initialState = {
     posts: [
@@ -7,7 +7,8 @@ let initialState = {
         { id: 2, message: "It's My first project", likesCount: 25 }
     ],
     newPostText: "bakdaulet",
-    profile: null
+    profile: null,
+    status: ""
 }
 const profileReduces = (state = initialState, action)=>{
     let copy = JSON.parse(JSON.stringify(state));
@@ -26,6 +27,8 @@ const profileReduces = (state = initialState, action)=>{
             return copy;
         case SET_USER_PROFILE:
             return {...state , profile: action.profile}
+        case SET_STATUS:
+            return {...state , status: action.status}
         default:
             return copy;
     }  
@@ -41,6 +44,11 @@ export const udateNewPostTextActionCreator=(text)=>{
         type:'UPDATE-NEW-POST-TEXT', newText: text
     }
 }
+export const setStatus = (status)=>{
+    return{
+        type: SET_STATUS, status
+    }
+}
   const setUserProfile=(profile)=>{
     return{
         type:SET_USER_PROFILE, profile
@@ -50,6 +58,12 @@ export const getUserProfile=(userId)=>(dispatch)=>{
     debugger;//thunk
     UserAPI.getProfile(userId).then(responce => {
         dispatch(setUserProfile(responce.data));  
+    }); 
+}
+export const getStatus=(userId)=>(dispatch)=>{
+    debugger;//thunk
+    profileAPI.getStatus(userId).then(responce => {
+        dispatch(setStatus(responce.data));  
     }); 
 }
 
